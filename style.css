@@ -17,6 +17,12 @@ body{
     margin: 15px;
 }
 
+#imgBotonCarrito{
+    width: 20px;
+    padding: 3px;
+}
+
+
 .noColor{
     background-color: transparent;
 }
