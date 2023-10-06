@@ -1,7 +1,66 @@
-body{
+body {
     margin: 0;
 }
-#productos{
+
+#navbar {
+    position: fixed;
+    top: 0;
+    background-color: white !important;
+    width: 100%;
+    z-index: 9;
+    border-bottom: 0.5px black solid;
+    box-shadow: rgba(170, 170, 170, 0.2);
+}
+
+#logoNavbar {
+    width: 85px;
+}
+
+#mostrarC {
+    background-color: transparent;
+    border: none;
+}
+
+
+#imgCarrito {
+    width: 40px;
+}
+
+#imgCarrito:hover,
+#imgLimpiar:hover,
+#imgX:hover {
+    transform: scale(110%);
+    transition: ease 0.3s;
+}
+
+#limpiarC,
+#ocultarC {
+    border: 0.5px darkgreen solid;
+    background-color: white;
+    border-radius: 100%;
+}
+
+#imgLimpiar,
+#imgX {
+    width: 50px;
+    padding: 10px;
+}
+
+
+.botonCarritoCerrado {
+    display: none;
+}
+
+.botonCarritoAbierto {
+    display: inherit;
+}
+
+#main {
+    height: 750px;
+    margin-top: 7.5em;
+}
+
+#productos {
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -10,25 +69,60 @@ body{
     text-align: center;
     background-color: rgba(170, 170, 170, 0.2);
     margin: 0;
+    position: relative;
+    z-index: 5;
+    height: 500px;
+    border-top: 10px solid darkgreen;
+    border-bottom: 10px solid darkgreen;
 }
 
-#carritoTotal{
-    background-color: rgba(170, 170, 170, 0.2);
+
+#carritoCompleto {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 500px;
+    height: 100%;
+}
+
+
+#carritoTotal {
+    display: flex;
+    flex-direction: column;
     margin: 15px;
 }
 
-#imgBotonCarrito{
-    width: 20px;
+#totalC {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+}
+
+#totalPrecio {
+    width: 40%;
+    padding: 5px 0px;
+    background-color: white;
+    border: solid darkgreen 1px;
+    border-radius: 10px;
+}
+
+.carritoVacio {
+    height: 80%;
+}
+
+#imgBotonCarrito {
+    width: 25px;
     padding: 3px;
 }
 
-
-.noColor{
-    background-color: transparent;
+.textoCarrito {
+    font-weight: bold;
 }
 
-#carrito{
+#carrito {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -36,29 +130,43 @@ body{
     flex-direction: row;
 }
 
-#totalC{
-    text-align: center;
-    font-weight: bold;
+.carritoCerrado {
+    position: relative !important;
+    border: 0px transparent;
+    z-index: -1 !important;
 }
 
-.divBotones{
+.carritoAbierto {
+    background-color: rgba(170, 170, 170, 0.5);
+    backdrop-filter: blur(5px);
+    border-left: solid darkgreen 2px;
+    z-index: 8;
+}
+
+
+.divBotones {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 }
 
-.boton{
+.botonesNavbar {
     margin: 10px;
 }
 
-.ulCarrito{
+.ulCarrito {
     display: flex;
     align-items: center;
-    width: 200px;
-    flex-direction: column;
-    background-color: white
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+    background-color: white;
+    list-style-type: none;
+    border: solid darkgreen 1px;
+    background-color: white;
+    border-radius: 10px;
 }
 
-.botonAgregarCarrito{
+.botonAgregarCarrito {
     color: white;
     background-color: green;
     font-weight: bolder;
@@ -69,44 +177,105 @@ body{
     border-style: none;
 }
 
-.botonAgregarCarrito:hover{
+.botonAgregarCarrito:hover {
     background-color: darkgreen;
 }
 
-#tituloh4{
-    color: darkgreen;
+#tituloh2 {
     text-align: center;
-    font-size: large;
+    font-size: x-large;
     font-weight: bold;
-}  
 
-ul{
+    margin: 15px;
+}
+
+.ulProducto {
     list-style-type: none;
-    border: solid darkgreen 2px;
+    border: solid darkgreen 1px;
     background-color: white;
     border-radius: 10px;
 }
 
-.imgProductos{
+.imgProductos {
     width: 200px;
 }
 
-.imgCarrito{
+.imgCarrito {
     width: 100px;
 }
 
-.m-0{
+.m-0 {
     margin: 0;
 }
 
-.m-15{
+.m-10 {
+    margin: 10px;
+}
+
+.m-15 {
     margin: 15px;
 }
 
-.pd-0{
+.pd-0 {
     padding: 0;
 }
 
-.pd-15{
+.pd-10 {
+    padding: 10px;
+}
+
+.pd-15 {
     padding: 15px;
+}
+
+
+.iconSwal {
+    border-color: red !important;
+    color: red !important;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+}
+
+.containerSwal {
+    background-color: rgba(170, 170, 170, 0.3) !important;
+}
+
+.popupSwal {
+    border: 1px darkgreen solid;
+}
+
+.titleSwal {
+    color: black;
+}
+
+.cancelSwal {
+    background-color: green !important;
+}
+
+.confirmSwal {
+    background-color: red !important;
+    box-shadow: none !important;
+}
+
+.loader {
+    width: 48px;
+    height: 48px;
+    border: 5px solid darkgreen;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    margin-bottom: 30px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

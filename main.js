@@ -13,6 +13,9 @@ botonLimpiar.onclick = () => {
     limpiarCarrito()
     mostrarCarrito()
 }
+main.onclick = () => {
+    ocultarCarrito()
+}
 
 
 
