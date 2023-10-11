@@ -1,0 +1,19 @@
+#sectionRedesFooter{
+    a{
+        color: $color-1 !important;
+        text-decoration: none;
+    }
+}
+
+#iconosRedesFooter{
+    transition: all ease 0.5s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+
+#sectionLinksFooter{
+    h6, i{
+        color: $color-1 !important;
+    }
+}

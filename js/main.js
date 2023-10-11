@@ -10,8 +10,8 @@ function traerProductos() {
                 cardProducto(el)
             })
         })
-
 }
+
 traerProductos()
 
 botonMostrar.onclick = () => {

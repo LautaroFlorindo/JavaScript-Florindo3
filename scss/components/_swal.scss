@@ -1,0 +1,28 @@
+.iconSwal {
+    border-color: red !important;
+    color: red !important;
+    width: 50px;
+    height: 50px;
+    font-size: 10px;
+}
+
+.containerSwal {
+    background-color: rgba(170, 170, 170, 0.3) !important;
+}
+
+.popupSwal {
+    border: 1px $color-1 solid;
+}
+
+.titleSwal {
+    color: black;
+}
+
+.cancelSwal {
+    background-color: $color-1 !important;
+}
+
+.confirmSwal {
+    background-color: red !important;
+    box-shadow: none !important;
+}

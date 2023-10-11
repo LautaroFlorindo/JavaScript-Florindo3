@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "img": "./img/aj.jpeg",
+        "img": "../img/aj.jpeg",
         "nombre": "Air Jordan",
         "precio": 25000,
         "tamano": "14x32x14cm",
@@ -10,7 +10,7 @@
     },
     {
         "id": 2,
-        "img": "./img/jordan4.jpeg",
+        "img": "../img/jordan4.jpeg",
         "nombre": "Air Jordan 4",
         "precio": 22000,
         "tamano": "14x32x14cm",
@@ -19,7 +19,7 @@
     },
     {
         "id": 3,
-        "img": "./img/dunklow.jpeg",
+        "img": "../img/dunklow.jpeg",
         "nombre": "Dunk Low",
         "precio": 17000,
         "tamano": "14x32x14cm",

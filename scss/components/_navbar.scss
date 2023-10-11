@@ -1,0 +1,70 @@
+#main {
+    margin-top: 7.5em;
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    background-color: white !important;
+    width: 100%;
+    z-index: 9;
+    border-bottom: 0.5px $border-color solid;
+    height: 7em;
+}
+
+#aLogoNavBar{
+    position: absolute;
+    left: 47%;
+    margin: 0;
+}
+
+#logoNavbar {
+    width: 85px;
+}
+
+#mostrarC {
+    background-color: transparent;
+    border: none;
+}
+
+#imgCarrito {
+    width: 40px;
+
+    &:hover,
+    #imgLimpiar:hover,
+    #imgX:hover {
+        transform: scale(110%);
+        transition: ease 0.3s;
+    }
+}
+
+#limpiarC,
+#ocultarC {
+    border: 0.5px $color-1 solid;
+    background-color: white;
+    border-radius: 100%;
+}
+
+#imgLimpiar,
+#imgX {
+    width: 50px;
+    padding: 10px;
+}
+
+
+.divBotones {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botonesNavbar {
+    margin: 10px;
+}
+
+.botonCarritoCerrado {
+    display: none;
+}
+
+.botonCarritoAbierto {
+    display: inherit;
+}

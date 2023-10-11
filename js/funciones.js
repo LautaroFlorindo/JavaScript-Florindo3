@@ -9,7 +9,7 @@ function pushF(lugar, pusheado) {
 
 function cardProducto(item) {
     ul = document.createElement("ul")
-    ul.classList.add("m-15", "pd-15", "ulProducto")
+    ul.classList.add("m-pd-15", "ulProducto")
     let divCardProductos = document.createElement("div")
     let botonAgregar = document.createElement("button")
     botonAgregar.className = "botonAgregarCarrito"
@@ -95,7 +95,6 @@ const botonLimpiar = document.getElementById("limpiarC");
 const main = document.getElementById("main")
 
 function mostrarCarrito() {
-    divCarrito.innerHTML = `<span class="loader"></span>`
     divCarritoYTotal.classList.add("pd-15")
     divCarritoCompleto.classList.add("carritoAbierto");
     divCarritoCompleto.classList.remove("carritoCerrado");
@@ -103,30 +102,28 @@ function mostrarCarrito() {
     botonMostrar.classList.remove("botonCarritoAbierto");
     botonOcultar.classList.remove("botonCarritoCerrado");
     botonLimpiar.classList.remove("botonCarritoCerrado");
-    
-    setTimeout(() => {
-        if (carrito.length == 0) {
-            divCarrito.innerHTML = ""
-            divCarritoYTotal.classList.add("carritoVacio")
-            let p = document.createElement("p")
-            p.classList.add("m-15", "pd-15");
-            p.innerText = "El carrito está vacío."
-            p.classList.add("textoCarrito")
-            divTotal.innerHTML = ""
-            pushF(divCarrito, p)
-        } else if (divCarritoCompleto.classList.contains("carritoAbierto")) {
-            divCarrito.innerHTML = ""
-            divCarritoYTotal.classList.remove("carritoVacio")
-            carrito.forEach((el) => {
-                cardCarrito(el)
-            })
-            let sumaFinal = 0;
-            carrito.forEach((el) => {
-                sumaFinal += (el.precio * el.cantidad)
-            })
-            divTotal.innerHTML = `<p id="totalPrecio">Total: $${sumaFinal}</p>`
-        } 
-    }, 300);
+
+    if (carrito.length == 0) {
+        divCarrito.innerHTML = ""
+        divCarritoYTotal.classList.add("carritoVacio")
+        let p = document.createElement("p")
+        p.classList.add("m-15", "pd-15");
+        p.innerText = "El carrito está vacío."
+        p.classList.add("textoCarrito")
+        divTotal.innerHTML = ""
+        pushF(divCarrito, p)
+    } else if (divCarritoCompleto.classList.contains("carritoAbierto")) {
+        divCarrito.innerHTML = ""
+        divCarritoYTotal.classList.remove("carritoVacio")
+        carrito.forEach((el) => {
+            cardCarrito(el)
+        })
+        let sumaFinal = 0;
+        carrito.forEach((el) => {
+            sumaFinal += (el.precio * el.cantidad)
+        })
+        divTotal.innerHTML = `<p id="totalPrecio">Total: $${sumaFinal}</p>`
+    }
 }
 
 
@@ -160,7 +157,7 @@ function limpiarCarrito() {
                 icon: "iconSwal",
                 confirmButton: "confirmSwal",
                 cancelButton: "cancelSwal",
-              }
+            }
         }).then((result) => {
             if (result.isConfirmed) {
                 divTotal.innerHTML = ""
@@ -177,13 +174,13 @@ function limpiarCarrito() {
 
 function agregarCarrito(boton, item) {
     boton.onclick = () => {
-            Toastify({
-                text: `Se agregó ${item.nombre} al carrito.`,
-                duration: 1000,
-                style: {
-                    background: "linear-gradient(to right, #4c944c, #008001)"
-                }
-            }).showToast();
+        Toastify({
+            text: `Se agregó ${item.nombre} al carrito.`,
+            duration: 1000,
+            style: {
+                background: "linear-gradient(to right, #4c944c, #008001)"
+            }
+        }).showToast();
 
         const elementoExistente = carrito.find((el) => el.id === item.id);
         let qty = 1;

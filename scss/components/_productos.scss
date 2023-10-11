@@ -1,0 +1,50 @@
+#tituloh2 {
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    margin: 15px;
+}
+
+#productos {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+    background-color: rgba(170, 170, 170, 0.2);
+    margin: 0;
+    position: relative;
+    z-index: 5;
+    height: 500px;
+    border-top: 5px solid $color-1;
+    border-bottom: 5px solid $color-1;
+    margin-bottom: 30px;
+}
+
+
+.botonAgregarCarrito {
+    color: white;
+    background-color: $color-1;
+    font-weight: bolder;
+    width: 80%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border-style: none;
+
+    &:hover {
+        background-color: darken($color-1, 10%);
+    }
+}
+
+.ulProducto {
+    list-style-type: none;
+    border: solid $color-1 1px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.imgProductos {
+    width: 200px;
+}

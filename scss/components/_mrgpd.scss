@@ -1,0 +1,19 @@
+.pd-0{
+    @include mrg-pd(0px, 0px)
+}
+
+.pd-15{
+    @include mrg-pd(0px, 15px)
+}
+
+.m-10{
+    @include mrg-pd(10px, 0px)
+}
+
+.m-15{
+    @include mrg-pd(15px, 0px)
+}
+
+.m-pd-15{
+    @include mrg-pd(15px, 15px)
+}
