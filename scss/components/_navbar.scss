@@ -22,36 +22,6 @@
     width: 85px;
 }
 
-#mostrarC {
-    background-color: transparent;
-    border: none;
-}
-
-#imgCarrito {
-    width: 40px;
-
-    &:hover,
-    #imgLimpiar:hover,
-    #imgX:hover {
-        transform: scale(110%);
-        transition: ease 0.3s;
-    }
-}
-
-#limpiarC,
-#ocultarC {
-    border: 0.5px $color-1 solid;
-    background-color: white;
-    border-radius: 100%;
-}
-
-#imgLimpiar,
-#imgX {
-    width: 50px;
-    padding: 10px;
-}
-
-
 .divBotones {
     display: flex;
     justify-content: flex-end;

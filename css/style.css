@@ -1,3 +1,57 @@
+#galeriaIndex {
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  justify-content: center;
+}
+
+#h1Index {
+  text-align: center;
+  margin-bottom: 45px;
+  font-size: 44px;
+}
+
+.gallery-wrap {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  height: 80vh;
+}
+
+#itemGallery {
+  flex: 1;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: none;
+  transition: all 1s ease;
+  filter: grayscale(100%);
+}
+#itemGallery:hover {
+  flex: 1.5;
+  filter: none;
+}
+
+.item-1 {
+  background-image: url("../../img/ajMesaPlanta.jpeg");
+}
+
+.item-2 {
+  background-image: url("../../img/ajMichaelShot.jpeg");
+}
+
+.item-3 {
+  background-image: url("../../img/ajEstante.jpeg");
+}
+
+.item-4 {
+  background-image: url("../../img/ajTravisSentado.jpeg");
+}
+
+.item-5 {
+  background-image: url("../../img/ajMesa.jpeg");
+}
+
 .pd-0 {
   margin: 0px;
   padding: 0px;
@@ -47,34 +101,6 @@
   width: 85px;
 }
 
-#mostrarC {
-  background-color: transparent;
-  border: none;
-}
-
-#imgCarrito {
-  width: 40px;
-}
-#imgCarrito:hover,
-#imgCarrito #imgLimpiar:hover,
-#imgCarrito #imgX:hover {
-  transform: scale(110%);
-  transition: ease 0.3s;
-}
-
-#limpiarC,
-#ocultarC {
-  border: 0.5px darkgreen solid;
-  background-color: white;
-  border-radius: 100%;
-}
-
-#imgLimpiar,
-#imgX {
-  width: 50px;
-  padding: 10px;
-}
-
 .divBotones {
   display: flex;
   justify-content: flex-end;
@@ -98,6 +124,46 @@
   right: 0;
   width: 500px;
   height: 100%;
+}
+
+#mostrarC {
+  background-color: transparent;
+  border: none;
+}
+
+#imgCarrito {
+  width: 40px;
+}
+#imgCarrito:hover,
+#imgCarrito #imgLimpiar:hover,
+#imgCarrito #imgX:hover {
+  transform: scale(110%);
+  transition: ease 0.3s;
+}
+
+#limpiarC,
+#ocultarC {
+  background-color: transparent;
+  border: none;
+}
+
+#imgLimpiar,
+#imgX {
+  width: 30px;
+}
+
+.botonQuitar {
+  border: none;
+  background-color: transparent;
+}
+
+.botonSumar, .botonRestar {
+  border: none;
+  background-color: transparent;
+}
+
+#botonMasMenosCarrito {
+  width: 15px;
 }
 
 #carritoTotal {
@@ -190,13 +256,12 @@
   flex-wrap: wrap;
   text-align: center;
   background-color: rgba(170, 170, 170, 0.2);
-  margin: 0;
+  margin: 50px 0px 0px;
   position: relative;
   z-index: 5;
   height: 500px;
-  border-top: 5px solid darkgreen;
-  border-bottom: 5px solid darkgreen;
-  margin-bottom: 30px;
+  border-top: 2px solid darkgreen;
+  border-bottom: 2px solid darkgreen;
 }
 
 .botonAgregarCarrito {

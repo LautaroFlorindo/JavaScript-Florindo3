@@ -13,13 +13,12 @@
     flex-wrap: wrap;
     text-align: center;
     background-color: rgba(170, 170, 170, 0.2);
-    margin: 0;
+    margin: 50px 0px 0px;
     position: relative;
     z-index: 5;
     height: 500px;
-    border-top: 5px solid $color-1;
-    border-bottom: 5px solid $color-1;
-    margin-bottom: 30px;
+    border-top: 2px solid $color-1;
+    border-bottom: 2px solid $color-1;
 }
 
 

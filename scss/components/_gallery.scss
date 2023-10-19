@@ -1,0 +1,55 @@
+#galeriaIndex {
+    display: flex;
+    width: 100%;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+#h1Index {
+    text-align: center;
+    margin-bottom: 45px;
+    font-size: 44px;
+}
+
+.gallery-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 95%;
+    height: 80vh;
+}
+
+#itemGallery {
+    flex: 1;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: none;
+    transition: all 1s ease;
+    filter: grayscale(100%);
+
+    &:hover {
+        flex: 1.5;
+        filter: none;
+    }
+}
+
+.item-1 {
+    background-image: url('../../img/ajMesaPlanta.jpeg');
+}
+
+.item-2 {
+    background-image: url('../../img/ajMichaelShot.jpeg');
+}
+
+.item-3 {
+    background-image: url('../../img/ajEstante.jpeg');
+}
+
+
+.item-4{
+    background-image: url('../../img/ajTravisSentado.jpeg');
+}
+
+.item-5 {
+    background-image: url('../../img/ajMesa.jpeg');
+}
