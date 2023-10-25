@@ -11,29 +11,66 @@
   font-size: 44px;
 }
 
-.gallery-wrap {
+#displayGallery {
   display: flex;
   flex-direction: row;
   width: 95%;
   height: 80vh;
 }
+@media (max-width: 992px) {
+  #displayGallery {
+    display: flex;
+    flex-wrap: wrap;
+    height: 1450px;
+    justify-content: space-around;
+    align-content: space-between;
+  }
+}
+@media (max-width: 768px) {
+  #displayGallery {
+    height: auto;
+  }
+}
 
 #itemGallery {
   flex: 1;
-  height: 100%;
+  height: 80vh;
   background-position: center;
   background-size: cover;
   background-repeat: none;
   transition: all 1s ease;
-  filter: grayscale(100%);
+  filter: grayscale(90%);
+}
+@media (max-width: 992px) {
+  #itemGallery {
+    display: flex;
+    flex: none;
+    width: 350px;
+    filter: none;
+  }
+}
+@media (max-width: 768px) {
+  #itemGallery {
+    width: 90%;
+  }
 }
 #itemGallery:hover {
-  flex: 1.5;
+  flex: 1.2;
   filter: none;
+}
+@media (max-width: 992px) {
+  #itemGallery:hover {
+    flex: none;
+  }
 }
 
 .item-1 {
   background-image: url("../img/ajMesaPlanta.jpeg");
+}
+@media (max-width: 992px) {
+  .item-1 {
+    display: none !important;
+  }
 }
 
 .item-2 {
@@ -91,10 +128,32 @@
   height: 7em;
 }
 
+#divNavBar {
+  justify-content: end;
+}
+@media (max-width: 992px) {
+  #divNavBar {
+    justify-content: space-between;
+  }
+}
+
 #aLogoNavBar {
   position: absolute;
   left: 47%;
   margin: 0;
+}
+@media (max-width: 992px) {
+  #aLogoNavBar {
+    position: inherit;
+    left: 0%;
+  }
+}
+
+#botonNavBar {
+  border: none;
+}
+#botonNavBar img {
+  width: 20px;
 }
 
 #logoNavbar {
@@ -122,8 +181,50 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 500px;
+  width: 450px;
   height: 100%;
+  overflow: scroll;
+}
+@media (max-width: 768px) {
+  #carritoCompleto {
+    width: 300px;
+  }
+}
+
+#carrito {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.carritoCerrado {
+  position: relative !important;
+  border: 0px transparent;
+  width: fit-content !important;
+}
+
+.carritoAbierto {
+  background-color: rgba(170, 170, 170, 0.5);
+  backdrop-filter: blur(5px);
+  border-left: solid darkgreen 2px;
+  z-index: 8;
+}
+
+.ulCarrito {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  flex-direction: column;
+  background-color: white;
+  list-style-type: none;
+  border: solid darkgreen 1px;
+  background-color: white;
+  border-radius: 10px;
 }
 
 #mostrarC {
@@ -167,9 +268,8 @@
 }
 
 #carritoTotal {
-  display: flex;
-  flex-direction: column;
-  margin: 15px;
+  margin: 5px;
+  justify-self: end;
 }
 
 #totalC {
@@ -200,43 +300,6 @@
   font-weight: bold;
 }
 
-#carrito {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.carritoCerrado {
-  position: relative !important;
-  border: 0px transparent;
-  z-index: -1 !important;
-  width: fit-content !important;
-}
-
-.carritoAbierto {
-  background-color: rgba(170, 170, 170, 0.5);
-  backdrop-filter: blur(5px);
-  border-left: solid darkgreen 2px;
-  z-index: 8;
-}
-
-.ulCarrito {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  flex-direction: row;
-  background-color: white;
-  list-style-type: none;
-  border: solid darkgreen 1px;
-  background-color: white;
-  border-radius: 10px;
-}
-
 .imgCarrito {
   width: 100px;
 }
@@ -259,9 +322,12 @@
   margin: 50px 0px 0px;
   position: relative;
   z-index: 5;
-  height: 500px;
+  height: auto;
   border-top: 2px solid darkgreen;
   border-bottom: 2px solid darkgreen;
+}
+#productos div {
+  margin: 20px 0px;
 }
 
 .botonAgregarCarrito {
@@ -270,7 +336,6 @@
   font-weight: bolder;
   width: 80%;
   padding: 5px;
-  margin-bottom: 10px;
   border-radius: 10px;
   border-style: none;
 }
@@ -301,7 +366,7 @@
   transform: scale(1.2);
 }
 
-#sectionLinksFooter h6, #sectionLinksFooter i {
+#sectionLinksFooter h5, #sectionLinksFooter h6, #sectionLinksFooter i {
   color: darkgreen !important;
 }
 

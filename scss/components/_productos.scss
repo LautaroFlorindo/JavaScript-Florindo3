@@ -16,9 +16,12 @@
     margin: 50px 0px 0px;
     position: relative;
     z-index: 5;
-    height: 500px;
+    height: auto;
     border-top: 2px solid $color-1;
     border-bottom: 2px solid $color-1;
+    div{
+        margin: 20px 0px;
+    }
 }
 
 
@@ -28,7 +31,6 @@
     font-weight: bolder;
     width: 80%;
     padding: 5px;
-    margin-bottom: 10px;
     border-radius: 10px;
     border-style: none;
 

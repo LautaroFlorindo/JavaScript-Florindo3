@@ -105,8 +105,8 @@ function limpiarCarrito() {
 function agregarCarrito(boton, item) {
     boton.onclick = () => {
         Toastify({
-            text: `Se agregó ${item.nombre} al carrito.`,
-            duration: 1000,
+            text: `Se agregó "${item.nombre}" al carrito.`,
+            duration: 1500,
             style: {
                 background: "linear-gradient(to right, #4c944c, #008001)"
             }

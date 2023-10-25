@@ -12,10 +12,29 @@
     height: 7em;
 }
 
+#divNavBar{
+    justify-content: end;
+    @media(max-width: 992px){
+        justify-content: space-between;
+    }
+}
+
 #aLogoNavBar{
     position: absolute;
     left: 47%;
     margin: 0;
+    @media(max-width: 992px){
+        position: inherit;
+        left: 0%;
+    }
+}
+
+#botonNavBar{
+    border: none;
+    
+    img{
+        width: 20px;
+    }
 }
 
 #logoNavbar {
