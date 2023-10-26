@@ -130,6 +130,7 @@
 
 #divNavBar {
   justify-content: end;
+  padding: 0px;
 }
 @media (max-width: 992px) {
   #divNavBar {
@@ -137,10 +138,20 @@
   }
 }
 
-#aLogoNavBar {
+#listaNavBarCompleta {
   position: absolute;
-  left: 47%;
-  margin: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#aLogoNavBar {
+  margin: 0px 10px;
 }
 @media (max-width: 992px) {
   #aLogoNavBar {
@@ -149,8 +160,41 @@
   }
 }
 
+.divListaNavBar {
+  margin: 0px;
+  padding: 0px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+}
+@media (max-width: 992px) {
+  .divListaNavBar {
+    display: none;
+  }
+}
+
+.listaNavBar {
+  display: flex;
+  width: 70%;
+  justify-content: space-evenly;
+  margin: 0px;
+  padding: 0px;
+}
+.listaNavBar li {
+  list-style: none;
+}
+.listaNavBar li a {
+  font-size: large;
+  text-decoration: none;
+  color: darkgreen;
+}
+
 #botonNavBar {
   border: none;
+  position: relative;
+  left: 47%;
 }
 #botonNavBar img {
   width: 20px;
