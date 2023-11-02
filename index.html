@@ -34,10 +34,17 @@
           </div>
         </div>
 
-        <button id="botonNavBar" class="navbar-toggler" type="button" data-bs-toggle="collapse"
-          data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <img src="./img/arrowDown.svg" alt="">
-        </button>
+        <div id="botonNavBar" class="dropdown-center">
+          <button class="btn btn-secondary" type="button" data-bs-toggle="dropdown" aria-expanded="false"><img src="./img/dropdownNavBar.svg" alt="">
+          </button>
+          <ul class="dropdown-menu ulDropdownNavBar">
+            <li><a class="dropdown-item dropdownItem" href="#">CATÁLOGO</a></li>
+            <li><a class="dropdown-item dropdownItem" href="#">PEDIDOS</a></li>
+            <li><a class="dropdown-item dropdownItem" href="#">NEWSLETTER</a></li>
+            <li><a class="dropdown-item dropdownItem" href="#">CONTACTO</a></li>
+          </ul>
+        </div>
+
         <div id="carritoCompleto" class="carritoCerrado">
           <div id="carritoTotal">
             <div class="divBotones">

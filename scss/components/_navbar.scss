@@ -31,6 +31,10 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    @media(max-width:992px) {
+        position: inherit;
+    }
 }
 
 #aLogoNavBar {
@@ -58,28 +62,70 @@
 .listaNavBar {
     display: flex;
     width: 70%;
-  justify-content: space-evenly;
+    justify-content: space-evenly;
     @include mrg-pd(0px, 0px);
 
     li {
         list-style: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+        transition: background-size 0.2s, color 0.3s ease;
+
+        &:hover {
+            color: rgb(0, 61, 0);
+            background-size: 100% 2px;
+            background-color: transparent;
+        }
 
         a {
             font-size: large;
             text-decoration: none;
             color: $color-1;
+            &:hover{
+                color: rgb(0, 61, 0);
+            }
         }
     }
 }
 
 #botonNavBar {
-    border: none;
-    position: relative;
-    left: 47%;
-    img {
-        width: 20px;
+    @media(min-width: 992px) {
+        display: none;
+    }
+
+    button {
+        border: none;
+        background-color: transparent;
+        width: 50px;
+
+        &:focus {
+            border: $color-1 1px solid;
+        }
     }
 }
+
+.ulDropdownNavBar {
+    left: -110% !important;
+    height: 200px;
+}
+
+.dropdownItem {
+    color: $color-1;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px;
+
+    &:active {
+        background-color: $color-1 !important;
+        color: white;
+    }
+}
+
+
 
 #logoNavbar {
     width: 85px;

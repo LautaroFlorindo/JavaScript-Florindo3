@@ -14,7 +14,7 @@
 #displayGallery {
   display: flex;
   flex-direction: row;
-  width: 95%;
+  width: 100%;
   height: 80vh;
 }
 @media (max-width: 992px) {
@@ -149,6 +149,11 @@
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 992px) {
+  #listaNavBarCompleta {
+    position: inherit;
+  }
+}
 
 #aLogoNavBar {
   margin: 0px 10px;
@@ -184,20 +189,56 @@
 }
 .listaNavBar li {
   list-style: none;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 2px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  transition: background-size 0.2s, color 0.3s ease;
+}
+.listaNavBar li:hover {
+  color: rgb(0, 61, 0);
+  background-size: 100% 2px;
+  background-color: transparent;
 }
 .listaNavBar li a {
   font-size: large;
   text-decoration: none;
   color: darkgreen;
 }
-
-#botonNavBar {
-  border: none;
-  position: relative;
-  left: 47%;
+.listaNavBar li a:hover {
+  color: rgb(0, 61, 0);
 }
-#botonNavBar img {
-  width: 20px;
+
+@media (min-width: 992px) {
+  #botonNavBar {
+    display: none;
+  }
+}
+#botonNavBar button {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+}
+#botonNavBar button:focus {
+  border: darkgreen 1px solid;
+}
+
+.ulDropdownNavBar {
+  left: -110% !important;
+  height: 200px;
+}
+
+.dropdownItem {
+  color: darkgreen;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+.dropdownItem:active {
+  background-color: darkgreen !important;
+  color: white;
 }
 
 #logoNavbar {
